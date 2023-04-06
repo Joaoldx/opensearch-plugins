@@ -22,9 +22,14 @@ export const TabStyled = styled(Tab)`
   margin: 0 2px;
   cursor: pointer;
   font-size: 18px;
+  transition: background 250ms ease-in-out;
+
+  &:hover {
+    background: #d5dbdb;
+  }
 
   &:nth-child(1) {
-    margin-left: 0;
+    margin-left: 15px;
   }
 
   &::selected {
