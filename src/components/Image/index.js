@@ -1,5 +1,5 @@
 import * as S from './styles'
 
-const Image = ({ text }) => <S.Image>{text}</S.Image>
+const Image = ({ src }) => <S.Image src={src} />
 
 export { Image }
