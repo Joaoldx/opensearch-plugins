@@ -9,7 +9,13 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   height: 400px;
-  gap: 30px;
+  gap: 25px;
   padding: 30px 15px;
   align-items: baseline;
+`
+
+export const Row = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 30px;
 `
