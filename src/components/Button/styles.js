@@ -7,7 +7,7 @@ export const Button = styled.button`
   border-radius: 7px;
   background-color: #3498db;
   width: fit-content;
-  align-self: end;
+  align-self: ${(props) => (props.alignEnd ? 'end' : 'auto')};
 
   &:hover {
     cursor: pointer;

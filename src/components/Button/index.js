@@ -1,7 +1,9 @@
 import * as S from './styles'
 
-const Button = ({ value, onClick }) => (
-  <S.Button onClick={onClick}>{value}</S.Button>
+const Button = ({ value, alignEnd, onClick }) => (
+  <S.Button onClick={onClick} alignEnd={alignEnd}>
+    {value}
+  </S.Button>
 )
 
 export { Button }
