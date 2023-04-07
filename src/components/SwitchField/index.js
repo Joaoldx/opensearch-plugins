@@ -1,7 +1,8 @@
 import Switch from 'react-switch'
 
-const SwitchField = ({ checked, onChange }) => (
+const SwitchField = ({ id, checked, onChange }) => (
   <Switch
+    id={id}
     onChange={onChange}
     checked={checked}
     uncheckedIcon={false}
