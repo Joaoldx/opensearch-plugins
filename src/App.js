@@ -32,8 +32,19 @@ const INITIAL_VALUE = {
   }
 }
 
+const TEXT_INITIAL_STATE = {
+  1: {
+    id: '1',
+    value: ''
+  },
+  2: {
+    id: '2',
+    value: ''
+  }
+}
+
 function App() {
-  const [textValue, setTextValue] = useState()
+  const [textValue, setTextValue] = useState(TEXT_INITIAL_STATE)
   const [checkSwitch, setCheckedSwitch] = useState(INITIAL_VALUE)
 
   useEffect(() => {
@@ -41,7 +52,10 @@ function App() {
   }, [checkSwitch])
 
   const handleText = (e) => {
-    setTextValue(e.target.value)
+    setTextValue({
+      ...textValue,
+      [e.target.id]: { ...textValue[e.target.id], value: e.target.value }
+    })
   }
 
   const handleSwitch = (checked, _, id) => {
@@ -66,7 +80,8 @@ function App() {
         <TabsComponent.TabPanel>
           <Container.Section>
             <TextField
-              value={textValue}
+              id={textValue[0]?.id}
+              value={textValue[0]?.value}
               placeholder={'Select your log Source'}
               onChange={handleText}
             />
@@ -79,7 +94,8 @@ function App() {
               ))}
             </Select>
             <TextField
-              value={textValue}
+              id={textValue[1]?.id}
+              value={textValue[1]?.value}
               placeholder={'Select a sub-type'}
               onChange={handleText}
             />

@@ -1,7 +1,12 @@
 import * as S from './styles'
 
-const TextField = ({ value, placeholder, onChange }) => (
-  <S.Input placeholder={placeholder} value={value} onChange={onChange} />
+const TextField = ({ id, value, placeholder, onChange }) => (
+  <S.Input
+    id={id}
+    placeholder={placeholder}
+    value={value}
+    onChange={onChange}
+  />
 )
 
 export { TextField }
